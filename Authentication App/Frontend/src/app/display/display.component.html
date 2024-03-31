@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+  <div class="dropdown" >
+    <a id="drop" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+     <img [src]="imageUrl" width="50px"> {{user.name}}  {{user.surname}}
+    </a>
+  
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="display">My profile</a></li>
+      <li><a class="dropdown-item" href="#">Group chat</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#" style="color: red;" (click)="LogOut()">Log Out</a></li>
+    </ul>
+  </div>
+  <h3>Personal Info</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th><button type="submit" (click)="redirect()">Edit</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Name:</td>
+        <td>{{user.name}}</td>
+      </tr>
+      <tr>
+        <td>Surname:</td>
+        <td>{{user.surname}}</td>
+      </tr>
+      <tr>
+        <td>Image:</td>
+        <td><img [src]="imageUrl" width="100px"></td>
+      </tr>
+      <tr>
+        <td>Bio:</td>
+        <td>{{user.bio}}</td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td>
+        <td>{{user.phoneNumber}}</td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>{{user.email}}</td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" value="{{user.password}}" disabled></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

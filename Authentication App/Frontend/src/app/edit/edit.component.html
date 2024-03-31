@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+<body>
+    <div class="dropdown" >
+        <a id="drop" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         <img [src]="imageUrl" width="50px"> {{userBeforeEdit.name}}  {{userBeforeEdit.surname}}
+        </a>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="display">My profile</a></li>
+          <li><a class="dropdown-item" href="#">Group chat</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#" style="color: red;"(click)="LogOut()">Log Out</a></li>
+        </ul>
+      </div>
+    <div class="box">
+    <h3>Change Info</h3>
+    <label>Image:</label>
+    <input type="file" name="image" accept="image/*" [(ngModel)]="image" (change)="onFileSelected($event)"><br>
+    <label>Name:</label>
+    <input type="text" placeholder="{{userBeforeEdit.name}}" name="name" [(ngModel)]="name" ><br>
+    <label>Surname:</label>
+    <input type="text" placeholder="{{userBeforeEdit.surname}}" name="surname" [(ngModel)]="surname"><br>
+    <label>Bio:</label>
+    <input type="text" placeholder="{{userBeforeEdit.bio}}" name="bio" [(ngModel)]="bio"><br>
+    <label>Phone Number:</label>
+    <input type="text" placeholder="{{userBeforeEdit.phoneNumber}}" name="phoneNumber" [(ngModel)]="phoneNumber"><br>
+    <label>email:</label>
+    <input type="email" placeholder="{{userBeforeEdit.email}}" name="email" [(ngModel)]="email"><br>
+    <label>password:</label>
+    <input type="password" name="password" [(ngModel)]="password"><br>
+    <button type="submit" (click)="Edit()">Save changes</button>
+</div>
+</body>
+</html>

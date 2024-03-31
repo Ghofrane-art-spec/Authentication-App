@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page</title>
+</head>
+<body>
+    <div class="box">
+        <h4>Login</h4>
+        <form >
+          <input type="email" name="email"   [(ngModel)]="email" placeholder="Email" style="margin-bottom: 20px;">
+          <input  type="password" name="pwd"   [(ngModel)]="pwd" placeholder="Password" style="margin-bottom: 20px;" >
+          <button type="submit" (click)="Login()">Login</button><br>
+
+          <div id="g_id_onload"
+             data-client_id="1027611561983-ttn8fhpq1d67cndjoem16vbsfa52sjhq.apps.googleusercontent.com"
+             data-context="signin"
+             data-ux_mode="popup"
+             data-login_uri="http://localhost:8080"
+             data-auto_prompt="false">
+          </div>
+
+          <div class="g_id_signin"
+            data-type="standard"
+            data-shape="pill"
+            data-theme="filled_blue"
+            data-text="continue_with"
+            data-size="large"
+            data-logo_alignment="left">
+          </div>
+         <p>Don’t have an account yet?<a href="register">Register</a></p>
+       </form>
+    </div>
+</body>
+</html>

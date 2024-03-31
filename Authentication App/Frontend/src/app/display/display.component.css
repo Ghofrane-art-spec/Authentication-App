@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Proza Libre", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #4f546c;
+    font-size: 0.9rem;
+  }
+
+  table {
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #e1e5ee;
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+  
+    thead {
+      box-shadow: 0 5px 10px #e1e5ee;
+    }
+  
+    th {
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 0.7rem;
+      font-weight: 900;
+    }
+  
+    td {
+      padding: 1rem 2rem;
+    }
+  
+  
+    /*Color alternating rows*/
+    tr:nth-child(even) {
+      background-color:#f4f6fb;
+    }
+  }
+
+  input{
+    border:none;
+    background-color: white;
+  }
+
+  button{
+    border: 1px solid orangered;
+    color: orangered;
+    background-color:  white;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 70px;
+    font-size: 13px;
+  }
+
+  h3{
+    margin-top: 60px;
+  }
+  
+  #drop{
+    border:none;
+    background-color: white;
+    color: black;
+    margin-left: 1000px;
+  }

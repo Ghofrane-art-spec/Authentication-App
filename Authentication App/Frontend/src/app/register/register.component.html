@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="box">
+        <h3>Register</h3>
+      <form>
+        <label id="title">Choose a profile picture:</label>
+       <input type="file" name="image" accept="image/*"  [(ngModel)]="image" (change)="onFileSelected($event)">
+       <input type="text" name="name"   [(ngModel)]="name" placeholder="Name">
+       <input type="text" name="surname"   [(ngModel)]="surname" placeholder="Surname" >
+       <input type="text" name="bio"   [(ngModel)]="bio" placeholder="Bio"> 
+       <input type="number" name="phone"   [(ngModel)]="phone" placeholder="Phone Number">
+       <input type="email" name="email"   [(ngModel)]="email" placeholder="Email">
+       <input type="password" name="pwd"   [(ngModel)]="pwd" placeholder="Password">
+       <button type="submit" (click)="Register()">Register</button>
+       <p>Already a member? <a href="">Login</a></p>
+      </form>
+    </div>
+</body>
+</html>
